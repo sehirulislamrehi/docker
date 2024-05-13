@@ -1,0 +1,10 @@
+version: '3'
+services:
+  php:
+    build:
+      context: ./my-laravel-app
+      dockerfile: Dockerfile
+    volumes:
+      - ./my-laravel-app:/var/www/html
+    ports:
+      - "8000:8000"
